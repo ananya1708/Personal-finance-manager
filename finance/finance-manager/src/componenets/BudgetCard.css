@@ -1,0 +1,22 @@
+.slide-in-alert {
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    z-index: 1000;
+    transition: top 0.5s ease-in-out;
+    animation: slideIn 0.5s forwards;
+  }
+  
+  @keyframes slideIn {
+    from {
+      top: -50px;
+    }
+    to {
+      top: 20px;
+    }
+  }
+  

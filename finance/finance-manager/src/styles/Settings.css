@@ -1,0 +1,18 @@
+.settings-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    font-family: sans-serif;
+  }
+  
+  .setting-item {
+    margin-bottom: 20px;
+  }
+  
+  .dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+  }
+  

@@ -1,0 +1,124 @@
+/* 🌊 Fullscreen Background with Soft Waves */
+.auth-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2, #ff758c);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🌊 Subtle Wave Animation */
+.auth-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2017/10/17/18/47/wave-2865251_960_720.png');
+    opacity: 0.15;
+    animation: waveMove 6s infinite alternate ease-in-out;
+    z-index: 0;
+}
+
+@keyframes waveMove {
+    0% { transform: translateY(10px); }
+    100% { transform: translateY(-10px); }
+}
+
+/* ✨ Glassmorphism Card */
+.auth-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 350px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    text-align: center;
+}
+
+/* 📌 Input Fields Styling */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input-group input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* ✨ Input Field: Usable & Glowing */
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* 🚀 Animated Button */
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* 🔥 Button Hover */
+.auth-btn:hover {
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* ✨ Animated Link */
+.auth-link {
+    color: #ffddc1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 400px) {
+    .auth-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .auth-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
